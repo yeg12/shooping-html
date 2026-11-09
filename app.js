@@ -1,16 +1,3 @@
-const box = document.querySelector(".box");
-box.style.backgroundColor = "red";
-const header = document.getElementById("color");
-const btn = document.querySelector("#btn");
-let x = 0;
-
-function rgb() {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
-  box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-  header.textContent = `Clicked ${x} rgb(${r}, ${g}, ${b})`;
-}
 function inject(item) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
@@ -22,10 +9,14 @@ function inject(item) {
       </div> `,
   );
 }
-inject("ME");
 
 btn.addEventListener("click", function () {
   x++;
   rgb();
 });
 
+const button = document.querySelectorAll("button");
+buttons.forEach((button) => 
+  button.addEventListener("clicker", function(){
+    console.log(event.target.closet(".card").getAttribute("data.item"));
+}));
