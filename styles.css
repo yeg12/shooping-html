@@ -1,10 +1,10 @@
 .card {
-  background-color: HEX: FFB800);
-  width: 250px; 
+  background-color: #FFB800;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  margin: 1rem 1rem;
-  text-align: center; 
+  margin: 1rem;
+  text-align: center;
 }
 
 .container {
@@ -12,9 +12,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: CC000E;
+  border-color: CC000E;
 }
+
 .card img {
   width: 100%;
+<<<<<<< Updated upstream
   height: 180px;
   object-fit: cover; 
 }
+=======
+  height: 180px; 
+  object-fit: cover; 
+}
+
+>>>>>>> Stashed changes

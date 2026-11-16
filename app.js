@@ -89,18 +89,18 @@ function inject(item) {
         <img src="${item.img}" alt="" />
         <p>${item.types}</p>
         <p>${item.price} dolla</p>
-        <button class = "btn> add to cart" </button>
+        <button class = "btn"> add to cart </button>
       </div> `,
   );
 }
 Mart.forEach(inject);
-// btn.addEventListener("click", function () {
-//   x++;
-//   rgb();
-// });
+btn.addEventListener("click", function () {
+  x++;
+  rgb();
+});
 
-// const button = document.querySelectorAll("button");
-// buttons.forEach((button) => 
-//   button.addEventListener("clicker", function(){
-//     console.log(event.target.closet(".card").getAttribute("data.item"));
-// }));
+const button = document.querySelectorAll("button");
+buttons.forEach((button) => 
+  button.addEventListener("clicker", function(){
+    console.log(event.target.closet(".card").getAttribute("data.item"));
+}));
