@@ -84,7 +84,7 @@ function inject(item) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "beforeend",
-    `<div class="card">
+    `<div class="card" data-iten="${item.name}>
         <h2 class="card-header">${item.name}</h2>
         <img src="${item.img}" alt="" />
         <p>${item.types}</p>
@@ -94,13 +94,8 @@ function inject(item) {
   );
 }
 Mart.forEach(inject);
-btn.addEventListener("click", function () {
-  x++;
-  rgb();
-});
-
-const button = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => 
-  button.addEventListener("clicker", function(){
-    console.log(event.target.closet(".card").getAttribute("data.item"));
+  button.addEventListener("clicker", function(event){
+    console.log(event.target.closet(".card").getAttribute("data-item"));
 }));
