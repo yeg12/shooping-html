@@ -1,3 +1,7 @@
+body{
+  background-color: #CC000E;
+}
+
 .card {
   background-color: #FFB800;
   width: 250px;
@@ -5,6 +9,7 @@
   flex-direction: column;
   margin: 1rem;
   text-align: center;
+  border-radius: 1rem;
 }
 
 .container {
@@ -12,12 +17,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: CC000E;
-  border-color: CC000E;
+  background-color: #CC000E;
 }
 
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover; 
+}
+.btn{
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
 }
