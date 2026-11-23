@@ -30,3 +30,16 @@ body{
   font-size: 0.95rem;
   border-radius: 8px;
 }
+.hero{
+  width: 100%;
+  height: 700px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/538bdee5e4b0db4eab0960f9/1420758090026-EKWDB4WV52OR7F9WDBKX/IMG_0261.JPG);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
