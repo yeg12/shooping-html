@@ -121,43 +121,34 @@ const Mart = [
   }
 ];
 
-const container = document.querySelector(".container");
-
-function renderItems(list) {
-  container.innerHTML = "";
-  list.forEach((item) => {
+function inject(items){
+    const container = document.querySelector(".container");
     container.insertAdjacentHTML(
-      "beforeend",
-      `<div class="card" data-item="${item.name}">
-        <h2 class="card-header">${item.name}</h2>
-        <img src="${item.img}" alt="${item.name}" />
-        <p>${item.types}</p>
-        <p>${item.price} dolla</p>
-        <button type="button" class="btn">add to cart</button>
-      </div>`
+            "beforeend",
+    `<div class="card" data-item="${items.types}">
+        <h2 class="card-header">${items.name}</h2>
+        <img class ="img" src="${items.img}" alt="" />
+        <p>$${items.price}</p>
+        <button class="btn"> add to cart</button>
+      </div> `,
     );
-  });
-}
+};
 
-function show(category) {
-  const filtered =
-    category === "all"
-      ? Mart
-      : Mart.filter((item) => item.types === category);
-  renderItems(filtered);
-}
+Mart.forEach(inject);
 
-container.addEventListener("click", function (event) {
-  const button = event.target.closest(".btn");
-  if (!button) return;
+function filterItems(filter){
+    const items = document.querySelectorAll("[data-item]");
+    items.forEach((item) => {
+        if(item.getAttribute("data-item") === filter || filter === "all"){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    })
+};
 
-  const card = button.closest(".card");
-  const itemName = card ? card.getAttribute("data-item") : null;
-
-  if (itemName) {
-    console.log(itemName);
-  }
-});
-
-show("all");
-
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => button.addEventListener("click", function(event){
+    console.log(event.target.closest("button").getAttribute("data-item"));
+}),
+);
